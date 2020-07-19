@@ -6,6 +6,22 @@ The project is now hooked up with Babel, so you will be able to write how you wa
 
 ### Instructions
 
+Create a `.babelrc` file in the root, and add the following:
+
+```sh
+{
+    "presets": [
+      [
+        "@babel/preset-env", {
+            "useBuiltIns": "entry"
+          }
+      ]
+    ]
+}
+```
+
+Now run the following commands:
+
 ```sh
 $ npm install
 $ npm run build
