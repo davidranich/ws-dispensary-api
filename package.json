@@ -1,0 +1,28 @@
+{
+  "name": "ws-dispensary-api",
+  "version": "1.0.0",
+  "description": "the dispensary api for handling internal DB calls (basic CRUD operations).",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon ./public/server.js",
+    "build": "babel src --out-dir public",
+    "watch": "babel src --out-dir public --watch"
+  },
+  "author": "David Ranich",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "mongoose": "^5.9.22"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "nodemon": "^2.0.4",
+    "regenerator-runtime": "^0.13.5"
+  }
+}
