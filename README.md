@@ -7,6 +7,7 @@ The project is now hooked up with Babel, so you will be able to write how you wa
 ### Instructions
 
 ```sh
+$ npm install
 $ npm run build
 $ npm run watch
 $ npm run dev
