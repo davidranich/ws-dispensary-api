@@ -1,7 +1,7 @@
 {
-  "name": "ws-core-api",
+  "name": "ws-dispensary-api",
   "version": "1.0.0",
-  "description": "Our core API that authenticates dispensaries to use internal API for DB calls (CRUD operations).",
+  "description": "the dispensary api for handling internal DB calls (basic CRUD operations).",
   "main": "./public/server.js",
   "scripts": {
     "dev": "nodemon ./public/server.js",
