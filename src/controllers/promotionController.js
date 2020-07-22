@@ -1,5 +1,3 @@
-import express from 'express';
-const router = express.Router();
 import Promotion from '../models/PromotionModel';
 
 exports.fetch_promotions = async (req, res) => {

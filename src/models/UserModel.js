@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
+const emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
 const userSchema = new Schema({
     Username: { 
@@ -9,11 +10,18 @@ const userSchema = new Schema({
     },
     Password: {
         type: String, // obviously will handle this differently in production
-        required: true
+        required: true,
+        min: 8
     }, 
     Email: {
         type: String,
-        required: true,
+        validate: {
+            validator: function(email) {
+                return emailRegex.test(email);
+            },
+            message: props => `${props.value} is not a valid email.`
+        },
+        required: [true, 'Email is required'],
         unique: true
     },
     Phone: {
@@ -39,8 +47,8 @@ const userSchema = new Schema({
     },
     Role: {
         type: Number,
-        required: true,
-        enum: [0, 1, 2, 3] // 0 = inactive, 1 = user, 2 = staff, 1337 = admin / owner, 1338 = us
+        enum: [0, 1, 2, 3], // 0 = inactive, 1 = user, 2 = staff, 1337 = admin / owner, 1338 = us
+        default: 1
     },
     Permissions: [String], // "driver", "front desk"
     LicenseNumber: {

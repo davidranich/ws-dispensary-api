@@ -6,14 +6,16 @@ import cors from 'cors';
 import helmet from 'helmet';
 import "regenerator-runtime";
 import config from '../config';
-import { authenticate } from './controllers/authenticationController';
+import { api_authenticate } from './controllers/authenticationController';
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 app.use(helmet());
 
-authenticate(config);
+api_authenticate(config);
+
+export { config };
 
 
 import userRoutes from './routes/userRoutes';

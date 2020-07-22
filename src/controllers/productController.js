@@ -1,5 +1,3 @@
-import express from 'express';
-const router = express.Router();
 import Product from '../models/ProductModel';
 
 exports.fetch_products = async (req, res) => {
