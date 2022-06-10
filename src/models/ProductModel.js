@@ -14,7 +14,7 @@ const ProductSchema = new Schema({
     ProductType: {
         type: String,
         required: true,
-        enum: ['Flower', 'Vaporizers', 'Edibles', 'CBD', 'Concentrates', 'Topicals', 'Acessories']
+        enum: ['Flower', 'Vaporizers', 'Edibles', 'CBD', 'Concentrates', 'Topicals', 'Accessories']
     },
     THC: {
         type: String,
